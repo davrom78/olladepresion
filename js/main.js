@@ -52,4 +52,53 @@ document.querySelectorAll('.comp-bars').forEach(el => barIO.observe(el));
     const idx = Math.round(track.scrollLeft / cardW);
     nav.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
   });
+
+  // Auto-scroll testimonials
+  let autoScroll;
+  function startAutoScroll(){
+    autoScroll = setInterval(() => {
+      const cardW = track.querySelector('.tc').offsetWidth + 20;
+      const maxScroll = track.scrollWidth - track.offsetWidth;
+      if(track.scrollLeft >= maxScroll - 10){
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: cardW, behavior: 'smooth' });
+      }
+    }, 4000);
+  }
+  startAutoScroll();
+  track.addEventListener('pointerdown', () => clearInterval(autoScroll));
+  track.addEventListener('pointerup', () => startAutoScroll());
+})();
+
+// Before/After slider for upgrade section
+(function(){
+  const slider = document.getElementById('upgSlider');
+  const after = document.getElementById('upgSliderAfter');
+  const handle = document.getElementById('upgSliderHandle');
+  if(!slider || !after || !handle) return;
+
+  function setPosition(pct){
+    pct = Math.min(100, Math.max(0, pct));
+    after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.style.left = `${pct}%`;
+  }
+  setPosition(50);
+
+  let dragging = false;
+  function pctFromEvent(e){
+    const rect = slider.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    return (x / rect.width) * 100;
+  }
+  function onMove(e){
+    if(!dragging) return;
+    setPosition(pctFromEvent(e));
+  }
+  slider.addEventListener('pointerdown', e => { dragging = true; setPosition(pctFromEvent(e)); });
+  window.addEventListener('pointermove', onMove);
+  window.addEventListener('pointerup', () => { dragging = false; });
+  slider.addEventListener('touchstart', e => { dragging = true; setPosition(pctFromEvent(e)); }, { passive: true });
+  slider.addEventListener('touchmove', onMove, { passive: true });
+  slider.addEventListener('touchend', () => { dragging = false; });
 })();
