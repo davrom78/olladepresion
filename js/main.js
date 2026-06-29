@@ -15,14 +15,6 @@ function closeCalModal(){
   document.body.style.overflow = '';
 }
 
-// Navbar scroll effect
-const nav = document.getElementById('nav');
-if(nav){
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-}
-
 // Scroll reveals
 const io = new IntersectionObserver(es => {
   es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('v'); io.unobserve(e.target); } });
