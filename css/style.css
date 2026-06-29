@@ -4,7 +4,7 @@
   --text:#F5F5F5;--text2:#CCCCCC;--dim:#888;--dim2:#555;
   --red:#B82525;--red2:#D43333;
   --gold:#C9A84C;--gold2:#E0C068;--gold-soft:rgba(201,168,76,.1);
-  --green:#22C55E;
+  --green:#1B9E4B;
   --serif:'Playfair Display',Georgia,serif;
   --sans:'Inter',system-ui,sans-serif;
   --ease:cubic-bezier(.25,.46,.45,.94);
@@ -130,8 +130,8 @@ a{text-decoration:none}
 .tc-name{font-size:.78rem;font-weight:500}
 .tc-source{font-size:.62rem;color:var(--dim);margin-top:.15rem}
 .testi-nav{display:flex;justify-content:center;gap:.5rem;margin-top:1.5rem}
-.testi-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.12);border:none;cursor:pointer;transition:all .3s;padding:0}
-.testi-dot.active{background:var(--gold);width:24px;border-radius:4px}
+.testi-dot{width:12px;height:12px;padding:8px;border-radius:50%;background:rgba(255,255,255,.12);background-clip:content-box;border:none;cursor:pointer;transition:transform .3s,background .3s;transform:scaleX(1);box-sizing:content-box}
+.testi-dot.active{background:var(--gold);transform:scaleX(3)}
 .drag-hint{text-align:center;font-size:.65rem;color:var(--dim2);margin-top:.75rem;letter-spacing:.05em}
 
 /* ═══ PLEASURE ═══ */
@@ -226,7 +226,7 @@ footer p{font-size:.6rem;color:rgba(255,255,255,.18);line-height:2.2}
 .upgrade-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-bottom:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.04)}
 .upg-step{text-align:center}
 .upg-step-num{width:32px;height:32px;border-radius:50%;background:var(--gold-soft);border:1px solid rgba(201,168,76,.25);color:var(--gold);font-family:var(--serif);font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto .65rem}
-.upg-step h4{font-size:.88rem;font-weight:600;margin-bottom:.25rem}
+.upg-step h3{font-size:.88rem;font-weight:600;margin-bottom:.25rem;font-family:var(--sans)}
 .upg-step p{font-size:.8rem;color:var(--dim);line-height:1.5;font-weight:300}
 
 .upgrade-benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem;margin-bottom:2rem}

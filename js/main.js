@@ -2,6 +2,13 @@
 function openCalModal(){
   document.getElementById('calModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Lazy load Elfsight solo al abrir
+  if(!document.querySelector('script[src*="elfsightcdn"]')){
+    const s = document.createElement('script');
+    s.src = 'https://elfsightcdn.com/platform.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }
 }
 function closeCalModal(){
   document.getElementById('calModal').classList.remove('open');

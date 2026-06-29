@@ -7,16 +7,22 @@
   const canvas = document.getElementById('heroCanvas');
   if(!pinArea || !canvas) return;
   const ctx = canvas.getContext('2d');
+  const heroInner = document.querySelector('.hero-inner');
 
   const images = new Array(FRAME_COUNT);
   let loadedCount = 0;
   let currentFrame = 1;
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let cw = 0, ch = 0;
+  let pinTotal = 0;
 
   function resizeCanvas(){
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
+    cw = window.innerWidth;
+    ch = window.innerHeight;
+    canvas.width = cw * dpr;
+    canvas.height = ch * dpr;
+    pinTotal = pinArea.offsetHeight - ch;
     drawFrame(currentFrame);
   }
 
@@ -67,11 +73,9 @@
   (window.requestIdleCallback || ((fn)=>setTimeout(fn,50)))(preloadBatch);
 
   function getProgress(){
-    const rect = pinArea.getBoundingClientRect();
-    const total = pinArea.offsetHeight - window.innerHeight;
-    if(total <= 0) return 0;
-    const scrolled = -rect.top;
-    return Math.min(1, Math.max(0, scrolled / total));
+    if(pinTotal <= 0) return 0;
+    const top = pinArea.getBoundingClientRect().top;
+    return Math.min(1, Math.max(0, -top / pinTotal));
   }
 
   let ticking = false;
@@ -86,7 +90,6 @@
         if(!images[currentFrame - 1]) loadFrame(currentFrame);
         drawFrame(currentFrame);
       }
-      const heroInner = document.querySelector('.hero-inner');
       if(heroInner){
         heroInner.style.opacity = String(Math.max(0, 1 - progress * 2.2));
       }
@@ -94,6 +97,9 @@
     });
   }
 
+  if(window.ResizeObserver){
+    new ResizeObserver(() => resizeCanvas()).observe(pinArea);
+  }
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('scroll', onScroll, { passive: true });
   resizeCanvas();
