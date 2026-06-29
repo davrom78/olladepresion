@@ -273,6 +273,7 @@
     <span class="ey r" style="text-align:center">Elige la tuya</span>
     <h2 class="h2 r" style="text-align:center">Un tamaño para <em>cada familia</em></h2>
     <p class="p r d1" style="text-align:center;max-width:420px;margin:.75rem auto 0">Mismos 5 seguros. Mismo acero. Misma garantía de 50 años.</p>
+    <img class="sizes-photo r d1" src="https://res.cloudinary.com/ddpbqxyrw/image/upload/v1782627240/hf_20260628_061010_0323adde-154a-4b9f-a896-758980ae81aa_givldf.png" alt="Olla de presión Royal Prestige en 6 y 10 litros" loading="lazy">
     <div class="size-cards">
       <div class="sz r">
         <div class="sz-vol">6 <small>litros</small></div>
@@ -367,7 +368,6 @@
         <p class="p" style="text-align:center;margin-bottom:1.25rem;max-width:480px;margin-left:auto;margin-right:auto"><b style="color:var(--text);font-weight:500">¿Tienes el modelo con agarraderas azules?</b> En ese caso aplica un reemplazo completo del producto. Pregúntanos — te explicamos todo.</p>
         <div style="display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center">
           <a href="https://wa.me/19512068960?text=Hola,%20tengo%20la%20Olla%20de%20Presi%C3%B3n%20modelo%20anterior%20y%20quiero%20saber%20sobre%20el%20programa%20de%20actualizaci%C3%B3n" class="btn btn-wa" target="_blank"><i>💬</i> Quiero actualizar mi olla</a>
-          <a href="https://www.royalprestige.com/apoyo/upgrade-program?product=olla-a-presion" class="btn btn-gold" target="_blank"><i>📋</i> Ver términos del programa</a>
         </div>
       </div>
     </div>
@@ -391,7 +391,7 @@
     <p class="p r d1" style="text-align:center;max-width:480px;margin:1rem auto 2.5rem">Agenda una demostración gratuita con DR Company California. Toca el acero. Siente el peso. Y descubre por qué miles de familias hispanas ya no cocinan de otra manera.</p>
     <div class="cta-btns r d2">
       <a href="https://wa.me/19512068960?text=Hola%20DRCC,%20me%20interesa%20la%20Olla%20de%20Presi%C3%B3n%20Royal%20Prestige.%20%C2%BFMe%20pueden%20dar%20informaci%C3%B3n%3F" class="btn btn-wa" target="_blank"><i>💬</i> Escríbenos por WhatsApp</a>
-      <a href="https://cal.com/drcompanycalifornia" class="btn btn-gold" target="_blank"><i>📅</i> Agenda tu Demo Gratis</a>
+      <button class="btn btn-gold" onclick="openCalModal()"><i>📅</i> Agenda tu Demo Gratis</button>
       <a href="tel:+19512068960" class="btn btn-ghost"><i>📞</i> Llámanos directo</a>
     </div>
   </div>
@@ -412,7 +412,18 @@
   © 2026 DR Company California. Todos los derechos reservados.</p>
 </footer>
 
+<!-- ══════════════════════════════════════════ -->
+<!-- CALENDAR MODAL — ELFSIGHT BOOKING WIDGET   -->
+<!-- ══════════════════════════════════════════ -->
+<div id="calModal" class="cal-modal" onclick="if(event.target===this)closeCalModal()">
+  <div class="cal-modal-inner">
+    <button class="cal-close" onclick="closeCalModal()">✕</button>
+    <div class="elfsight-app-e1437b7f-f4c3-42e2-be34-bb7521eabf72" data-elfsight-app-lazy></div>
+  </div>
+</div>
+
 <script src="js/frame-engine.js"></script>
 <script src="js/main.js"></script>
+<script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 </html>

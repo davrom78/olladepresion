@@ -1,3 +1,13 @@
+// Calendar modal
+function openCalModal(){
+  document.getElementById('calModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCalModal(){
+  document.getElementById('calModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 // Navbar scroll effect
 const nav = document.getElementById('nav');
 if(nav){
