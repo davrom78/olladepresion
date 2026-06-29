@@ -26,7 +26,7 @@ document.querySelectorAll('.r').forEach(el => io.observe(el));
 const barIO = new IntersectionObserver(es => {
   es.forEach(e => {
     if(e.isIntersecting){
-      e.target.querySelectorAll('.cb-new').forEach(b => {
+      e.target.querySelectorAll('.cb-bar-new').forEach(b => {
         requestAnimationFrame(() => requestAnimationFrame(() => b.classList.add('go')));
       });
       barIO.unobserve(e.target);
