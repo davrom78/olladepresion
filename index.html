@@ -37,12 +37,97 @@
       "name": "DR Company California",
       "url": "https://drcc.online"
     }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿La olla de presión Royal Prestige es segura?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. La Nueva Olla de Presión Royal Prestige® tiene 5 mecanismos de seguridad que trabajan juntos para controlar la presión, y está hecha de acero inoxidable grado quirúrgico 316L."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué tamaños hay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Viene en 6 litros, ideal para familias de 2 a 4 personas, y en 10 litros, para familias grandes y reuniones."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué garantía tiene?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tiene 50 años de garantía limitada de Royal Prestige®."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Dónde la puedo comprar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Royal Prestige® no se vende en tiendas ni en Amazon. Solo a través de Distribuidores Autorizados como DR Company California, que atiende el sur de California."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Hay planes de pago?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Pregúntanos por los planes de pago accesibles por WhatsApp o por teléfono al (951) 206-8960."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ya tengo la olla de presión modelo anterior, ¿tengo que comprar una nueva?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No necesariamente. Existe un programa de actualización para clientes con el modelo anterior. Escríbenos y te decimos si calificas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo verla antes de comprarla?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Puedes agendar una demostración gratis, o verla a tamaño real sobre tu estufa con la cámara de tu celular en ar.drcc.online."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "HomeGoodsStore",
+   "name": "DR Company California",
+   "description": "Distribuidor Autorizado Independiente de Royal Prestige® en el sur de California.",
+   "url": "https://presion.drcc.online/",
+   "telephone": "+1-951-206-8960",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Riverside",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    "Inland Empire",
+    "Sur de California"
+   ],
+   "availableLanguage": [
+    "es",
+    "en"
+   ]
+  }
+ ]
 }
 </script>
 
@@ -58,6 +143,14 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/luz.css">
+<!-- Microsoft Clarity: mapas de calor y grabaciones (gratis) -->
+<script>
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zivz8gjnpm");
+document.addEventListener('click',function(e){var a=e.target.closest('a,button');if(!a)return;var h=a.getAttribute('href')||'',n=null;
+if(h.indexOf('wa.me')>-1)n='clic_whatsapp';else if(h.indexOf('tel:')===0)n='clic_llamar';else if(h.indexOf('ar.drcc.online')>-1)n='clic_ver_en_mi_cocina';else if((a.getAttribute('onclick')||'').indexOf('openCalModal')>-1)n='clic_agendar_demo';
+if(n&&window.clarity)clarity('event',n);},true);
+</script>
 </head>
 <body>
 
@@ -69,11 +162,11 @@
     <canvas class="hero-canvas" id="heroCanvas"></canvas>
     <div class="hero-grad"></div>
     <div class="hero-inner">
-      <h1>Esa carne que se deshace con el tenedor.<br><em>En la mitad del tiempo.</em></h1>
+      <h1><span class="h1-kw">Olla de Presión Royal Prestige® · 6 y 10 litros</span>Esa carne que se deshace con el tenedor.<br><em>En la mitad del tiempo.</em></h1>
       <p class="hero-p">La olla de presión con <b>cinco mecanismos de seguridad</b> que te quita el miedo, te devuelve horas, y hace que tu familia repita plato cada noche.</p>
       <div class="hero-btns">
         <a href="https://wa.me/19512068960?text=Hola,%20me%20interesa%20la%20nueva%20Olla%20de%20Presi%C3%B3n,%20mi%20nombre%20es%20" class="btn btn-wa" target="_blank"><i>💬</i> Quiero saber más</a>
-        <a href="#dolor" class="btn btn-gold"><i>↓</i> Ver por qué</a>
+        <a href="https://ar.drcc.online" class="btn btn-ar"><i>📱</i> Verla en mi cocina</a>
       </div>
     </div>
     <div class="scroll-cue">DESCUBRE</div>
@@ -424,6 +517,23 @@
 </section>
 
 <!-- ══════════════════════════════════════════ -->
+<!-- PREGUNTAS FRECUENTES (SEO + búsqueda con IA) -->
+<!-- ══════════════════════════════════════════ -->
+<section class="sec faq" id="preguntas">
+  <div class="wrap">
+    <span class="ey" style="text-align:center">Preguntas frecuentes</span>
+    <h2 class="h2" style="text-align:center;margin-bottom:2rem">Lo que más nos <em>preguntan</em></h2>
+    <details class="faq-item"><summary>¿La olla de presión Royal Prestige es segura?</summary><p>Sí. La Nueva Olla de Presión Royal Prestige® tiene 5 mecanismos de seguridad que trabajan juntos para controlar la presión, y está hecha de acero inoxidable grado quirúrgico 316L.</p></details>
+    <details class="faq-item"><summary>¿Qué tamaños hay?</summary><p>Viene en 6 litros, ideal para familias de 2 a 4 personas, y en 10 litros, para familias grandes y reuniones.</p></details>
+    <details class="faq-item"><summary>¿Qué garantía tiene?</summary><p>Tiene 50 años de garantía limitada de Royal Prestige®.</p></details>
+    <details class="faq-item"><summary>¿Dónde la puedo comprar?</summary><p>Royal Prestige® no se vende en tiendas ni en Amazon. Solo a través de Distribuidores Autorizados como DR Company California, que atiende el sur de California.</p></details>
+    <details class="faq-item"><summary>¿Hay planes de pago?</summary><p>Sí. Pregúntanos por los planes de pago accesibles por WhatsApp o por teléfono al (951) 206-8960.</p></details>
+    <details class="faq-item"><summary>Ya tengo la olla de presión modelo anterior, ¿tengo que comprar una nueva?</summary><p>No necesariamente. Existe un programa de actualización para clientes con el modelo anterior. Escríbenos y te decimos si calificas.</p></details>
+    <details class="faq-item"><summary>¿Puedo verla antes de comprarla?</summary><p>Sí. Puedes agendar una demostración gratis, o verla a tamaño real sobre tu estufa con la cámara de tu celular en ar.drcc.online.</p></details>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
 <!-- FINAL CTA                                  -->
 <!-- ══════════════════════════════════════════ -->
 <section class="sec cta">
@@ -465,5 +575,14 @@
 </div>
 
 <script src="js/frame-engine.js"></script>
-<script src="js/main.js"></script></body>
+<script src="js/main.js"></script>
+<!-- BARRA FIJA (celular) -->
+<nav class="barra-fija" id="barraFija" aria-label="Contacto rápido">
+  <a class="bf-wa" href="https://wa.me/19512068960?text=Hola,%20me%20interesa%20la%20nueva%20Olla%20de%20Presi%C3%B3n,%20mi%20nombre%20es%20" target="_blank">💬 WhatsApp</a>
+  <a class="bf-tel" href="tel:+19512068960">📞 Llamar</a>
+</nav>
+<script>
+(function(){var b=document.getElementById('barraFija');function f(){b.classList.toggle('ver',window.scrollY>window.innerHeight*1.2)}window.addEventListener('scroll',f,{passive:true});f()})();
+</script>
+</body>
 </html>

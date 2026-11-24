@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════════
+   LUZ — versión clara premium para mujeres 35–55+
+   Se carga DESPUÉS de style.css. Solo sobreescribe colores,
+   tamaños de letra y botones. El inicio cinematográfico queda oscuro.
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#FBF7F1;          /* crema cálido */
+  --bg2:#FFFFFF;         /* tarjetas */
+  --bg3:#F4EDE3;         /* bandas alternas */
+  --bg4:#EDE3D6;
+  --text:#2A211C;        /* tinta café, más suave que negro */
+  --text2:#4A3F38;
+  --dim:#6B5E55;         /* gris cálido legible (contraste ~6:1) */
+  --dim2:#7A6D63;
+  --red:#A51E2B;         /* rojo Royal profundo */
+  --red2:#A51E2B;
+  --gold:#C9A84C;        /* dorado decorativo (líneas, íconos) */
+  --gold2:#8A6A22;       /* dorado para TEXTO: legible sobre crema */
+  --gold-soft:rgba(201,168,76,.14);
+  --line:rgba(42,33,28,.10);
+  --shadow:0 10px 30px rgba(60,40,20,.08);
+}
+html{font-size:17px}
+@media(min-width:768px){html{font-size:18px}}
+body{background:var(--bg);color:var(--text)}
+
+/* ── INICIO: se mantiene oscuro y cinematográfico ── */
+.hero-pin-area{--text:#FFFFFF;--text2:#EDE7DF;--dim2:#BDB3A8;--gold2:#E6C873;--gold:#D9B95E;background:#0b0907}
+.hero-inner h1{font-size:clamp(2.1rem,6vw,3.9rem)}
+.hero-p{font-size:1.15rem;font-weight:400}
+.hero-pin-area .btn-gold{color:#fff;border-color:rgba(255,255,255,.55)}
+.scroll-cue{font-size:.75rem}
+
+/* ── TEXTO: más grande y con más peso (nada de letra delgada) ── */
+.p,.pc p,.sc p,.tc blockquote,.pleasure-moments li,.upg-step p,.upg-ben,.sb-row,.w-sub,.urgency p,.hero-p{font-weight:400}
+.p{font-size:1.05rem;line-height:1.75}
+.ey{font-size:.8rem;letter-spacing:.2em;color:var(--gold2)}
+.h2{color:var(--text);font-weight:500}
+.h2 em{color:var(--gold2)}
+.h2 strong{color:var(--red)}
+.pc h3{font-size:1.2rem}
+.pc p,.sc p{font-size:1rem;color:var(--text2)}
+.sc h3{font-size:1.05rem}
+.cb-label{font-size:.9rem;color:var(--text2)}
+.cb-bar{font-size:.85rem;height:40px}
+.cb-bar-old{background:var(--bg4);color:var(--text2)}
+.cb-bar-new{color:#2A211C;font-size:.85rem}
+.sb-row{font-size:1rem;border-bottom:1px solid var(--line)}
+.sb-row:last-child{color:var(--gold2)}
+.tag{font-size:.75rem;color:var(--red);border-color:var(--red)}
+.tc blockquote{font-size:1.02rem;color:var(--text2)}
+.tc-stars{font-size:1rem}
+.tc-name{font-size:.95rem}
+.tc-source{font-size:.8rem}
+.drag-hint{font-size:.8rem;color:var(--dim)}
+.pleasure-moments li{font-size:1.05rem}
+.pq blockquote{font-size:1.1rem}
+.pq cite{font-size:.82rem}
+.sz-desc{font-size:.95rem;color:var(--text2)}
+.sz-tag{font-size:.85rem;color:var(--gold2)}
+.sz-vol small{font-size:1.1rem}
+.sz-pop{font-size:.7rem;color:#2A211C}
+.w-word{color:var(--text2)}
+.w-sub{font-size:1.02rem}
+.urgency p{font-size:1rem;color:var(--text2)}
+.urgency b{color:var(--red)}
+.upgrade-badge{font-size:.7rem;color:#2A211C}
+.upg-slider-label-old,.upg-slider-label-new{font-size:.75rem}
+.upg-slider-label-new{color:#2A211C}
+.upg-step h3{font-size:1rem}
+.upg-step p{font-size:.95rem}
+.upg-ben{font-size:1rem;color:var(--text2);background:var(--bg3)}
+.w-num,.sz-vol{color:var(--gold2)}
+
+/* ── TARJETAS: blancas, con sombra suave en vez de bordes oscuros ── */
+.pc,.sc,.savings-box,.tc,.upgrade-box{background:var(--bg2);border:1px solid var(--line);box-shadow:var(--shadow)}
+.pc:hover{border-color:rgba(165,30,43,.35)}
+.sc:hover{border-color:rgba(201,168,76,.6)}
+.testi{background:var(--bg3);border-color:var(--line)}
+.tc-author{border-top:1px solid var(--line)}
+.testi-dot{background:rgba(42,33,28,.18);background-clip:content-box}
+.urgency{background:var(--bg3);border-color:var(--line)}
+.upgrade-steps,.upgrade-cta{border-top:1px solid var(--line)}
+.divider{background:linear-gradient(90deg,transparent,rgba(138,106,34,.35),transparent)}
+.split-img,.sizes-photo,.upg-slider{box-shadow:0 20px 50px rgba(60,40,20,.15)}
+
+/* ── SECCIÓN "PLACER": foto luminosa con velo crema ── */
+.pleasure-bg{filter:brightness(.95) saturate(.9)}
+.pleasure-grad{background:linear-gradient(90deg,var(--bg) 0%,rgba(251,247,241,.92) 38%,rgba(251,247,241,.55) 65%,rgba(251,247,241,.15) 100%)}
+.pq{background:rgba(255,255,255,.85);box-shadow:var(--shadow)}
+@media(max-width:768px){
+  .pleasure-grad{background:linear-gradient(180deg,var(--bg) 0%,rgba(251,247,241,.9) 30%,rgba(251,247,241,.85) 70%,var(--bg) 100%)}
+}
+
+/* ── TAMAÑOS: fondo claro ── */
+.sizes::before{filter:brightness(1.1) saturate(.6) blur(2px);opacity:.25}
+.sizes::after{background:linear-gradient(180deg,var(--bg) 0%,rgba(251,247,241,.6) 25%,rgba(251,247,241,.6) 75%,var(--bg) 100%)}
+.sz{background:rgba(255,255,255,.92);border:1px solid var(--line);box-shadow:var(--shadow)}
+
+/* ── BOTONES: grandes y fáciles de tocar ── */
+.btn{font-size:1.02rem;font-weight:600;padding:1rem 1.9rem;min-height:56px}
+.btn i{font-size:1.25rem}
+.btn-gold{color:var(--gold2);border:1.5px solid var(--gold)}
+.btn-gold:hover{background:var(--gold);color:#2A211C}
+.btn-ghost{color:var(--text);border:1.5px solid rgba(42,33,28,.25)}
+.btn-ghost:hover{border-color:var(--text)}
+.btn-ar{background:#fff;color:#2A211C}
+.btn-ar:hover{transform:translateY(-2px)}
+
+/* ── PIE DE PÁGINA ── */
+footer{border-top:1px solid var(--line);background:var(--bg3)}
+.footer-drcc{filter:none;opacity:.85}
+.footer-badge{opacity:.9}
+.footer-tagline{font-size:1rem;color:var(--text2)}
+footer p{font-size:.82rem;color:var(--dim)}
+
+/* ── BARRA FIJA ABAJO (solo celular) ── */
+.barra-fija{display:none}
+@media(max-width:768px){
+  .barra-fija{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:900;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+    background:rgba(251,247,241,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(60,40,20,.08);
+    transform:translateY(110%);transition:transform .35s var(--ease)}
+  .barra-fija.ver{transform:none}
+  .barra-fija a{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;min-height:54px;border-radius:14px;font-family:var(--sans);font-weight:700;font-size:1.02rem}
+  .barra-fija .bf-wa{background:#178A42;color:#fff;flex:1.6}
+  .barra-fija .bf-tel{background:#fff;color:#2A211C;border:1.5px solid rgba(42,33,28,.2)}
+  footer{padding-bottom:6rem}
+}
+
+/* ── ARREGLO: letras del inicio en blanco ── */
+.hero-pin-area{color:var(--text)}
+.hero-inner h1{color:#fff}
+.h1-kw{display:block;font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E6C873;margin-bottom:1rem;font-style:normal}
+
+/* ── PREGUNTAS FRECUENTES ── */
+.faq .wrap{max-width:760px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:.75rem;box-shadow:var(--shadow);overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:1.15rem 3rem 1.15rem 1.35rem;font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--text);position:relative;min-height:56px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);font-family:var(--sans);font-size:1.6rem;color:var(--gold2);transition:transform .3s}
+.faq-item[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq-item p{padding:0 1.35rem 1.25rem;font-size:1.02rem;line-height:1.75;color:var(--text2)}
